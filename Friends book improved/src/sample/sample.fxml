@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <TabPane prefHeight="404.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Create a Friend">
+                    <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <VBox alignment="CENTER_RIGHT" layoutY="14.0" prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+                                    <children>
+                                        <Label text="First Name:" />
+                                        <Label text="Last Name:" />
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" layoutX="108.0" layoutY="15.0" prefHeight="197.0" prefWidth="100.0" spacing="20.0">
+                                    <children>
+                                        <TextField fx:id="textGetFirstName" promptText="First name" />
+                                        <TextField fx:id="textGetLastName" promptText="Last name" />
+                                    </children>
+                                </VBox>
+                        <Label layoutX="8.0" layoutY="227.0" text="Cliock the save btn to chose where to save this friend(s)" />
+                        <Button fx:id="btnSave1" layoutX="15.0" layoutY="255.0" mnemonicParsing="false" onAction="#saveGroup1" text="Save 1" />
+                        <Button fx:id="btnSave2" layoutX="97.0" layoutY="255.0" mnemonicParsing="false" onAction="#saveGroup2" text="Save 2" />
+                        <ListView fx:id="friendList" layoutX="377.0" layoutY="27.0" onMouseClicked="#displayFriend" prefHeight="170.0" prefWidth="209.0" />
+                        <Label layoutX="20.0" layoutY="297.0" text="Which group do you want to save the friend(s) into?" />
+                        <Button fx:id="btnLoad1" layoutX="25.0" layoutY="327.0" mnemonicParsing="false" onAction="#loadGroup1" text="Load 1" />
+                        <Button fx:id="btnLoad2" layoutX="103.0" layoutY="327.0" mnemonicParsing="false" onAction="#loadGroup2" text="Load 2" />
+                        <Button fx:id="btnDeleteFriend3" layoutX="216.0" layoutY="124.0" mnemonicParsing="false" onAction="#deleteFriend" text="Delete Friend" />
+                                <Button layoutX="216.0" layoutY="80.0" mnemonicParsing="false" onAction="#addFriend" text="Add Friend" />
+                        <Label fx:id="lblFirstName" layoutX="475.0" layoutY="296.0" />
+                        <Label fx:id="lblLastName" layoutX="509.0" layoutY="297.0" />
+                        <Label layoutX="452.0" layoutY="236.0" text="info friend" />
+                        <Label layoutX="372.0" layoutY="294.0" text="Name:" />
+                            </children>
+                        </AnchorPane>
+                    </content></Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</VBox>
